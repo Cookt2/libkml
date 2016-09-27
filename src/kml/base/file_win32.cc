@@ -40,8 +40,7 @@ namespace kmlbase {
 // Internal to the win32 file class. We need a conversion from string to
 // LPCWSTR.
 static std::wstring Str2Wstr(const string& str) {
-  std::wstring wstr(str.length(), L'');
-  std::copy(str.begin(), str.end(), wstr.begin());
+  std::wstring wstr(str.begin(), str.end());
   return wstr;
 }
 
